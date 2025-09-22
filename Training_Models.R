@@ -95,7 +95,7 @@ for (species in species_l) {
       validation_results_overall <- rbind(validation_results_overall, validation_results_iteration)
       print(paste("Finished iteration", i, "for model", model_name, "and species", species))
     }
-    dir_val <- paste0("D:/Universitaet/Master/SoSe_2025/Adv_Species_Distr/FinalProject/Data/results/",
+    dir_val <- paste0("Data/results/",
                       model_name, "/")
     if (!dir.exists(dir_val)) dir.create(dir_val, recursive = TRUE)
     out_path <- paste0(dir_val, species, "validation_metrics.csv")
@@ -103,4 +103,5 @@ for (species in species_l) {
     print(paste("Saved results for species:", species, "and model:", model_name))
   }
 }
+
 
